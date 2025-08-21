@@ -22,7 +22,7 @@ namespace Task_2
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            var previewForm = new PreviewForm();
+            var previewForm = new PreviewForm(_tableData);
             previewForm.ShowDialog();
         }
 

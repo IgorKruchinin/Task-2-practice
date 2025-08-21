@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Task_2
@@ -7,9 +8,11 @@ namespace Task_2
     public partial class PreviewForm : Form
     {
         private DataGridView dataGridView;
+        private List<string[]> _tableData;
 
-        public PreviewForm()
+        public PreviewForm(List<string[]> tableData)
         {
+            _tableData = tableData;
             InitializeComponent();
             InitializeDataGridView();
         }
@@ -78,6 +81,15 @@ namespace Task_2
 
             // Добавляем контрол на форму
             this.Controls.Add(dataGridView);
+
+            // Наполняем таблицу данными (если есть)
+            if (_tableData != null)
+            {
+                foreach (var row in _tableData)
+                {
+                    dataGridView.Rows.Add(row);
+                }
+            }
         }
     }
 }
