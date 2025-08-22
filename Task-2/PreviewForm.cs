@@ -59,6 +59,7 @@ namespace Task_2
             dataGridView.Rows[0].Cells[2].Value = "Номенк. номер";
             dataGridView.Rows[0].Cells[3].Value = "Единица измерения";
             dataGridView.Rows[1].Cells[3].Value = "кол";
+            dataGridView.Rows[0].Cells[4].Value = "Единица измерения";
             dataGridView.Rows[1].Cells[4].Value = "наименование";
             dataGridView.Rows[0].Cells[5].Value = "Кол-во (масса)";
             dataGridView.Rows[0].Cells[6].Value = "Номер паспорта";

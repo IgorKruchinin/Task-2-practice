@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Task_2
 {
-    public partial class Form1 : Form
+    public partial class ExcelAutomatisation : Form
     {
-        public Form1()
+        public ExcelAutomatisation()
         {
             InitializeComponent();
         }
