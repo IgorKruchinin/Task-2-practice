@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelAutomatisation.cs">
+    <Compile Include="formExcelAutomatisation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcelAutomatisation.Designer.cs">
-      <DependentUpon>ExcelAutomatisation.cs</DependentUpon>
+    <Compile Include="formExcelAutomatisation.Designer.cs">
+      <DependentUpon>formExcelAutomatisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreviewForm.cs">
+    <Compile Include="formPreview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PreviewForm.Designer.cs">
-      <DependentUpon>PreviewForm.cs</DependentUpon>
+    <Compile Include="formPreview.Designer.cs">
+      <DependentUpon>formPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ExcelAutomatisation.resx">
-      <DependentUpon>ExcelAutomatisation.cs</DependentUpon>
+    <EmbeddedResource Include="formExcelAutomatisation.resx">
+      <DependentUpon>formExcelAutomatisation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

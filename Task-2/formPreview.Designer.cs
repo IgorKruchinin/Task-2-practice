@@ -1,6 +1,6 @@
 ﻿namespace Task_2
 {
-    partial class PreviewForm
+    partial class formPreview
     {
         /// <summary>
         /// Required designer variable.

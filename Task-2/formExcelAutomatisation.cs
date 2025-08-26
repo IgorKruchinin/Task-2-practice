@@ -1,37 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Task_2
 {
-    public partial class ExcelAutomatisation : Form
+    public partial class formExcelAutomatisation : Form
     {
-        public ExcelAutomatisation()
+        public formExcelAutomatisation()
         {
             InitializeComponent();
         }
 
-        private List<string[]> _tableData;
+        private List<string[]> tableData;
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-            var previewForm = new PreviewForm(_tableData);
+            formPreview previewForm = new formPreview(this.tableData);
             previewForm.ShowDialog();
         }
 
         private void btnFillData_Click(object sender, EventArgs e)
         {
             string[] lines = File.ReadAllLines("data.txt");
-            var data = new List<string[]>();
+            List<string[]> data = new List<string[]>();
 
-            foreach (var line in lines)
+            foreach (string line in lines)
             {
                 if (!string.IsNullOrWhiteSpace(line))
                 {
@@ -40,13 +34,13 @@ namespace Task_2
             }
 
             // Сохраняем данные для использования в Excel
-            _tableData = data;
+            this.tableData = data;
             MessageBox.Show("Данные успешно загружены!");
         }
 
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            if (_tableData == null || _tableData.Count == 0)
+            if (this.tableData == null || this.tableData.Count == 0)
             {
                 MessageBox.Show("Сначала загрузите данные!");
                 return;
@@ -122,7 +116,7 @@ namespace Task_2
 
                 // Заполнение данными
                 int row = 5;
-                foreach (var item in _tableData)
+                foreach (string[] item in this.tableData)
                 {
                     worksheet.Cells[row, 1] = item[0];
                     worksheet.Cells[row, 2] = item[1];

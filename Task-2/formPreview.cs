@@ -5,14 +5,14 @@ using System.Windows.Forms;
 namespace Task_2
 {
 
-    public partial class PreviewForm : Form
+    public partial class formPreview : Form
     {
         private DataGridView dataGridView;
-        private List<string[]> _tableData;
+        private List<string[]> tableData;
 
-        public PreviewForm(List<string[]> tableData)
+        public formPreview(List<string[]> tableData)
         {
-            _tableData = tableData;
+            this.tableData = tableData;
             InitializeComponent();
             InitializeDataGridView();
         }
@@ -84,9 +84,9 @@ namespace Task_2
             this.Controls.Add(dataGridView);
 
             // Наполняем таблицу данными (если есть)
-            if (_tableData != null)
+            if (this.tableData != null)
             {
-                foreach (var row in _tableData)
+                foreach (string[] row in this.tableData)
                 {
                     dataGridView.Rows.Add(row);
                 }

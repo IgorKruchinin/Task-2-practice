@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Windows.Forms;
-using Microsoft.Office.Interop.Excel;
-
-namespace Task_2
+﻿namespace Task_2
 {
-    partial class ExcelAutomatisation
+    partial class formExcelAutomatisation
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +35,7 @@ namespace Task_2
             // 
             // btnExportExcel
             // 
-            this.btnExportExcel.Location = new System.Drawing.Point(12, 125);
+            this.btnExportExcel.Location = new System.Drawing.Point(12, 12);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(199, 23);
             this.btnExportExcel.TabIndex = 0;
@@ -51,7 +45,7 @@ namespace Task_2
             // 
             // btnFillData
             // 
-            this.btnFillData.Location = new System.Drawing.Point(217, 125);
+            this.btnFillData.Location = new System.Drawing.Point(217, 12);
             this.btnFillData.Name = "btnFillData";
             this.btnFillData.Size = new System.Drawing.Size(264, 23);
             this.btnFillData.TabIndex = 1;
@@ -61,7 +55,7 @@ namespace Task_2
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(500, 125);
+            this.btnPreview.Location = new System.Drawing.Point(487, 12);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(219, 23);
             this.btnPreview.TabIndex = 2;
@@ -69,16 +63,16 @@ namespace Task_2
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
-            // Form1
+            // ExcelAutomatisation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(718, 43);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.btnFillData);
             this.Controls.Add(this.btnExportExcel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ExcelAutomatisation";
+            this.Text = "Excel Automatisation";
             this.ResumeLayout(false);
 
         }
